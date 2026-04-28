@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <info>
+    <title>Custom Vancouver No Title Bold Year</title>
+    <id>http://www.zotero.org/styles/custom-vancouver-no-title</id>
+    <link href="http://www.zotero.org/styles/vancouver" rel="independent-parent"/>
+    <category citation-format="numeric"/>
+    <updated>2026-04-28</updated>
+  </info>
+
+  <citation collapse="citation-number">
+    <layout vertical-align="sup">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <bibliography>
+  <layout suffix=".">
+    <text variable="citation-number" suffix=". "/>
+
+    <names variable="author" delimiter=", " et-al-min="4" et-al-use-first="1">
+      <name form="short"/>
+      <et-al font-style="italic"/>
+    </names>
+    <text value=". "/>
+
+    <text variable="container-title" form="short" font-style="italic"/>
+    <text value=" "/>
+
+    <text variable="issued" font-weight="bold">
+      <date form="numeric" date-parts="year"/>
+    </text>
+
+    <text value=", "/>
+    <text variable="volume"/>
+    <text value="("/>
+    <text variable="issue"/>
+    <text value="), "/>
+    <text variable="page"/>
+  </layout>
+</bibliography>
