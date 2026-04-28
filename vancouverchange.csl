@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  
   <info>
     <title>Custom Vancouver No Title Bold Year</title>
     <id>http://www.zotero.org/styles/custom-vancouver-no-title</id>
@@ -8,34 +9,42 @@
     <updated>2026-04-28</updated>
   </info>
 
+  <!-- CITAS EN SUPERÍNDICE -->
   <citation collapse="citation-number">
     <layout vertical-align="sup">
       <text variable="citation-number"/>
     </layout>
   </citation>
 
+  <!-- BIBLIOGRAFÍA -->
   <bibliography>
-  <layout suffix=".">
-    <text variable="citation-number" suffix=". "/>
+    <layout suffix=".">
+      
+      <text variable="citation-number" suffix=". "/>
 
-    <names variable="author" delimiter=", " et-al-min="4" et-al-use-first="1">
-      <name form="short"/>
-      <et-al font-style="italic"/>
-    </names>
-    <text value=". "/>
+      <names variable="author" delimiter=", " et-al-min="2" et-al-use-first="1">
+        <name form="short"/>
+        <et-al font-style="italic"/>
+      </names>
+      <text value=". "/>
 
-    <text variable="container-title" form="short" font-style="italic"/>
-    <text value=" "/>
+      <!-- Revista abreviada en cursiva -->
+      <text variable="container-title" form="short" font-style="italic"/>
+      <text value=" "/>
 
-    <text variable="issued" font-weight="bold">
-      <date form="numeric" date-parts="year"/>
-    </text>
+      <!-- Año en negrita (CORRECTO) -->
+      <date variable="issued" font-weight="bold">
+        <date-part name="year"/>
+      </date>
 
-    <text value=", "/>
-    <text variable="volume"/>
-    <text value="("/>
-    <text variable="issue"/>
-    <text value="), "/>
-    <text variable="page"/>
-  </layout>
-</bibliography>
+      <text value=", "/>
+      <text variable="volume"/>
+      <text value="("/>
+      <text variable="issue"/>
+      <text value="), "/>
+      <text variable="page"/>
+
+    </layout>
+  </bibliography>
+
+</style>
